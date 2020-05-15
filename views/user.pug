@@ -1,0 +1,63 @@
+extends base
+
+block content
+    .user-container
+        .user-page
+            .user-page__profile-container
+                img.user-page__profile-picture(src=`/assets/users/${user.photo}` onerror=`this.onerror=null; this.src='/assets/users/default.jpg'`)
+                p.user-page__info #{user.fname} #{user.lname}
+                p.user-page__info #{user.email}
+                p.user-page__info #{user.school}
+                if user.phone
+                    p.user-page__info #{user.phone}
+            .user-page__function-container
+                .user-page__tabs
+                    button#settings.user-page__tabs-links.default Settings
+                    button#manage.user-page__tabs-links Manage
+                .user-page__tab-content#settings-tab
+                    .user-page__settings-container
+                        h2 Update Your Account
+                        form.user-page__settings-data-form
+                            label.user-page__settings-label(for='fname') First Name
+                            input.user-page__settings-input#fname(type='text' name='fname' value=`${user.fname}` required)
+                            label.user-page__settings-label(for='lname') Last Name
+                            input.user-page__settings-input#lname(type='text' name='lname' value=`${user.lname}` required)
+                            label.user-page__settings-label(for='email') Email
+                            input.user-page__settings-input#email(type='email' name='email' value=`${user.email}` required)
+                            label.user-page__settings-label(for='school') School
+                            input.user-page__settings-input#school(type='text' name='school' value=`${user.school}` required)
+                            label.user-page__settings-label(for='phone') Phone Number
+                            input.user-page__settings-input#phone(type='text' name='phone' value=`${user.phone}`)
+                            .form__group.form__photo-upload
+                                label.user-page__settings-label(for="photo") Choose new photo
+                                input.user-page__pic-upload(type='file', accept='image/*', id='photo', name='photo')
+                            .button-container
+                                button.btn--login(type='submit') Update
+                    .user-page__settings-container
+                        h2 Update Your Password
+                        form.user-page__settings-pw-form(autocomplete='off')
+                            label.user-page__settings-label(for='currPW') Current Password
+                            input.user-page__settings-input#currPassword(type='password' name='currPW' required autocomplete="new-password")
+                            label.user-page__settings-label(for='newPW') New Password
+                            input.user-page__settings-input#newPassword(type='password' name='newPW' required)
+                            label.user-page__settings-label(for='confirmPW') Confirm Password
+                            input.user-page__settings-input#confirmPassword(type='password' name='confirmPW' required)
+                            .button-container
+                                button.btn--login.btn--update(type='submit') Update
+                .user-page__tab-content#manage-tab
+                    if user.role === 'teacher'
+                        .Ustatement
+                            p.Ustatement__paragraph
+                                | Submit Data: Save or visualize your excel files       
+                        a.user-link(href='/data') Submit Data
+                        .Ustatement
+                            p.Ustatement__paragraph
+                                | View Data: View your saved excel files  
+                        a.user-link(href=`/data/${user._id}`) View Data
+                       
+                    else    
+                        a.user-link(href='/data') Submit Data
+                        a.user-link(href=`/data/${user._id}`) View Data
+                        a.user-link(href='/register') Register New Account
+                        a.user-link(href='/manage') Manage Teachers
+                        a.user-link(href='/inactive') Inactive Accounts

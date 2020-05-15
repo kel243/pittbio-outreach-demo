@@ -1,0 +1,28 @@
+extends base
+
+block content
+    .contact-container
+        form.contact-form(action="/contact" method="post")
+            .contact-form__contact-inputs
+                img.contact-form__logo(src='/assets/logos/outreach-logo.png' alt='Logo')
+                .statement.padding-top-none 
+                    h4.statement__header
+                        |Instructions
+                    p.statement__paragraph(style='text-align: center;')
+                        |To request access to the materials, please fill out the form below.You will receive an email with a password, which you can use to sign into the website. 
+                        |You will have the opportunity to reset your password once you are logged in to your account.               
+                .contact-name-form
+                    label.contact-fname-label(for='fname') First name: 
+                    input.contact-fname-input#fname(type='text' name='fname' required='')
+                    label.contact-lname-label(for='lname') Last name:
+                    input.contact-lname-input#lname(type='text' name='lname' required='')
+                label.contact-school-label(for='school') School:
+                input.contact-school-input#school(type='text' name='school' required='')
+                label.contact-email-label(for='email') Email:
+                input.contact-email-input#email(type='text' name='email' required='')
+                label.contact-label(for='phone') Phone Number:
+                input.contact-phone-input#phone(type='text' name='phone')
+                label.contact-question-label(for='question') Question:
+                textarea.contact-question-input#question(cols='115' rows='5' name='question' required='')
+                .button-container
+                    button.btn--login(type='submit') Send Question

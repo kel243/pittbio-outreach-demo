@@ -1,0 +1,40 @@
+extends base
+
+block content
+    .manage-container
+        .bars-container
+            each teacher in teachers
+                .bar
+                    .bar__header
+                        img.bar__photo(src=`/assets/users/${teacher.photo}` onerror=`this.onerror=null; this.src='/assets/users/default.jpg'` alt=`${teacher.fname}`)
+                    .bar__info
+                        p.bar__text 
+                            | #{teacher.lname}, #{teacher.fname} 
+                        p.bar__text
+                            span.bar__spacer | 
+                        p.bar__text
+                            | #{teacher.email} 
+                        p.bar__text
+                            span.bar__spacer | 
+                        p.bar__text
+                            | #{teacher.school} 
+                        p.bar__text
+                            span.bar__spacer | 
+                            if teacher.phone != "" 
+                                | #{teacher.phone}
+                            else
+                                | ---------
+                        p.bar__text
+                            span.bar__spacer | 
+                            if teacher.validated 
+                                span.validated Validated
+                            else
+                                span.notValidated Not Validated
+                    .bar__btns
+                        a.bar__btn.bar__btn--data(href=`/data/${teacher._id}`) Data
+                        form.disable-form
+                            button.bar__btn.bar__btn--disable(type='submit') Disable
+                            input.id-input-disable(type="hidden" name="teacher_id" value=`${teacher._id}`)
+                        
+
+                            

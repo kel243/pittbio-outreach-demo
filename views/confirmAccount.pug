@@ -1,0 +1,9 @@
+extends base
+
+block content
+    .error-container#confirmAccount
+        .error
+            .error__title
+                h2 Confirming Your Email!
+                input#confirm-token(type='hidden' value=`${token}`)
+        

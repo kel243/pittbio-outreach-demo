@@ -1,0 +1,12 @@
+name: MassDataViz
+title: MassDataViz
+username:
+account: ectothermer
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2103738
+bundleId: 3057796
+url: https://ectothermer.shinyapps.io/MassDataViz/
+when: 1587697416.16071
+asMultiple: FALSE
+asStatic: FALSE

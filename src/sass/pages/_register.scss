@@ -1,0 +1,163 @@
+.register-container {
+  background-image: linear-gradient(rgba(black, 0.2), rgba(black, 0.2)),
+    url(../assets/pictures/hero.jpg);
+  background-attachment: fixed;
+  width: 100%;
+  padding-bottom: 10rem;
+  padding-top: 15rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+
+  @media only screen and (max-width: $bp-medium-large) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 0;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  }
+}
+
+.register-form {
+  width: 80%;
+  height: 65rem;
+  background-color: white;
+  border-radius: 1rem;
+  margin: 0 auto;
+  padding: 0 10rem;
+  box-shadow: 0 0.1rem 3rem grey;
+  overflow: hidden;
+  animation: moveInTop 0.7s ease-out;
+
+  @media only screen and (max-width: $bp-medium-large) {
+    width: 70rem;
+    height: 75rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+    padding: 0 6rem;
+    box-shadow: none;
+  }
+
+  &__logo {
+    margin-left: 50%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    transform: translateX(-50%);
+    width: 20rem;
+  }
+
+  &__register-inputs {
+    width: 100%;
+  }
+}
+
+.register {
+  &-name-form {
+    width: 100%;
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: auto;
+    column-gap: 2rem;
+  }
+
+  &-fname-input,
+  &-lname-input {
+    width: 100%;
+    height: 3rem;
+    margin-top: 0.5rem;
+    border: none;
+    border-bottom: 1px black solid;
+    font-size: 2rem;
+
+    &:required {
+      box-shadow: none;
+    }
+  }
+
+  &-fname-label {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  &-lname-label {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+
+  &-fname-input {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  &-lname-input {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  &-school-input,
+  &-email-input,
+  &-phone-input {
+    display: block;
+    width: 100%;
+    height: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 3rem;
+    border: none;
+    border-bottom: 1px black solid;
+    font-size: 2rem;
+
+    &:required {
+      box-shadow: none;
+    }
+  }
+
+  &-label,
+  &-fname-label,
+  &-lname-label {
+    display: block;
+    font-size: 1.3rem;
+    color: gray;
+
+    @media only screen and (max-width: $bp-medium-large) {
+      font-size: 1.5rem;
+    }
+  }
+
+  &-label {
+    margin-top: 5rem;
+  }
+
+  &-role-select {
+    width: 10rem;
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2px 1rem;
+    border-radius: 0.5rem;
+    border: 1px solid #aaa;
+    overflow: hidden;
+
+    @media only screen and (max-width: $bp-small) {
+      margin-bottom: 3rem;
+    }
+  }
+}
+
+.button-container {
+  text-align: center;
+}
+
+.role-label {
+  display: inline;
+  margin-right: 2rem;
+}

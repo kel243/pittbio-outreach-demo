@@ -1,0 +1,146 @@
+.user-container {
+  background-image: linear-gradient(rgba(black, 0.2), rgba(black, 0.2)),
+    url(../assets/pictures/hero.jpg);
+  width: 100%;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  padding-top: 12rem;
+  padding-bottom: 3rem;
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.user-page {
+  background-color: white;
+  margin: 0 auto;
+  width: 50rem;
+  border-radius: 0.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+
+  &__profile-container {
+    background-image: linear-gradient(
+      rgba($color-pitt-blue, 0.7),
+      rgba($color-pitt-blue, 1)
+    );
+    //background-color: $color-pitt-blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+
+  &__profile-picture {
+    width: 10rem;
+    border: 3px solid $color-pitt-gold;
+    border-radius: 10rem;
+    margin-bottom: 1rem;
+  }
+
+  &__info {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: white;
+  }
+
+  &__function-container {
+    text-align: center;
+  }
+
+  &__tabs {
+    display: flex;
+    justify-content: space-around;
+    background-color: $color-pitt-blue;
+
+    &-links {
+      border: none;
+      padding: 0 1rem 0.5rem 1rem;
+      cursor: pointer;
+      font-size: 1.5rem;
+      background-color: $color-pitt-blue;
+      border-bottom: 3px solid $color-pitt-blue;
+      color: white;
+
+      &:hover {
+        border-bottom: 3px solid $color-pitt-gold;
+      }
+
+      &--active {
+        border-bottom: 3px solid $color-pitt-gold;
+      }
+    }
+  }
+
+  &__tab-content {
+    padding: 3rem 8rem;
+  }
+
+  &__settings-data-form,
+  &__settings-pw-form {
+    text-align: left;
+    padding: 1rem 0;
+  }
+
+  &__settings-input {
+    display: block;
+    width: 100%;
+    height: 3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 2rem;
+    border: none;
+    border-bottom: 1px black solid;
+    font-size: 1.6rem;
+
+    &:required {
+      box-shadow: none;
+    }
+  }
+
+  &__settings-label {
+    display: block;
+    font-size: 1.3rem;
+    color: gray;
+    margin-top: 1rem;
+  }
+
+  &__pic-upload {
+    margin-top: 1rem;
+  }
+}
+
+.user-link {
+  display: block;
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  background-color: $color-pitt-blue;
+  padding: 1rem 2rem;
+  margin: 2rem 0;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $color-pitt-blue-light;
+  }
+}
+
+.Ustatement {
+  &__header {
+    display: inline-block;
+    border-bottom: 1px solid $color-pitt-blue;
+    padding-bottom: 1vh;
+    margin-bottom: 2vh;
+    text-transform: uppercase;
+    color: $color-pitt-blue;
+    font-size: 2em;
+  }
+
+  &__paragraph {
+    text-align: center;
+    margin: 0 auto;
+    line-height: 4rem;
+    font-size: 1.5em;
+  }
+}

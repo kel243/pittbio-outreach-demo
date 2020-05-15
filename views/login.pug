@@ -1,0 +1,17 @@
+extends base
+
+block content
+    .login-container
+        form.login-form
+            .login-form__login-picture
+                img.login-form__img(src='/assets/pictures/login-pic.jpg' alt='Picture')
+            .login-form__login-inputs
+                img.login-form__logo(src='/assets/logos/outreach-logo.png' alt='Logo')
+                label.login-label(for='email') E-mail Address
+                input#email.email-input(type='email', name='email', required)
+                label.login-label(for='password') Password
+                input#password.password-input(type='password', name='password', required, minlength='8')
+                .login-form__login-options
+                    a.forgot-pw(href='/forgotPassword') Forgot password
+                <button type="submit" class="btn--login">Login</button>
+                // a.btn--login.btn--login--fake(href='/admin' style='width: 15rem;') Login

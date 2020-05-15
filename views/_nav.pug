@@ -1,0 +1,47 @@
+mixin navLi(link, text, active)
+    li.nav-list__item
+        a.nav-list__link.underline(href=`/${link}` class=`${ navActive == active ? 'nav-list__link--active' : ''}`)
+            span #{text}
+
+mixin navHamLi(link, text)
+    li.navigation-hamburger__item
+        a.navigation-hamburger__link(href=`/${link}`) #{text}
+
+nav.navigation
+    img.nav-logo(src='/assets/logos/outreach-logo.png' alt='Logo')
+    ul.nav-list
+        +navLi('', 'Home', 'home')
+        +navLi('contact', 'Contact', 'contact')
+        +navLi('students', 'Students', 'students')
+        if user
+            if user.validated == true
+                +navLi('teachers', 'Teachers', 'teachers')
+            li.nav-list__item
+                img.nav-list__profile-picture(src=`/assets/users/${user.photo}` onerror=`this.onerror=null; this.src='/assets/users/default.jpg'` class=`${ navActive == 'account' ? 'nav-list__profile-picture--active' : ''}`)
+            +navLi('account', `Hi, ${user.fname}!`, 'account')
+            li.nav-list__item
+                a.nav-list__link-logout.nav-list__link.underline
+                    span Logout
+        else
+            li.nav-list__item
+                a.nav-list__link.nav-list__link--login(href='/login' class=`${ navActive == 'login' ? 'nav-list__link--login--active' : ''}`)
+                    span Login
+
+.navigation-hamburger
+    input#navi-toggle.navigation-hamburger__checkbox(type='checkbox')
+    label.navigation-hamburger__button(for='navi-toggle')
+        span.navigation-hamburger__icon
+    .navigation-hamburger__background
+    nav.navigation-hamburger__nav
+        ul.navigation-hamburger__list
+            +navHamLi('', 'Home')
+            +navHamLi('contact', 'Contact')
+            +navHamLi('students', 'Students')
+            if user
+                +navHamLi('teachers', 'Teachers')
+                +navHamLi('account', `Account`)
+                li.navigation-hamburger__item
+                    a.navigation-hamburger__link.navigation-hamburger__link-logout(href='#') Logout
+            else
+                +navHamLi('login', 'Login')
+            

@@ -1,0 +1,32 @@
+.error-container {
+  background-image: linear-gradient(rgba(black, 0.5), rgba(black, 0.5)),
+    url(../assets/pictures/hero.jpg);
+  width: 100%;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  padding-top: 12rem;
+  padding-bottom: 3rem;
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+}
+
+.error {
+  padding: 10rem 0;
+  text-align: center;
+
+  &__title {
+    color: white;
+    font-size: 4rem;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+
+  &__msg {
+    font-size: 3rem;
+    color: white;
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+      1px 1px 0 #000;
+  }
+}

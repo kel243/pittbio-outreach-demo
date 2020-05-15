@@ -1,0 +1,113 @@
+.btn {
+    &,
+    &:link,
+    &:visited {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1.5rem 4rem;
+        display: inline-block;
+        border-radius: 10rem;
+        transition: all .2s;
+        position: relative;
+        font-size: 2rem;
+        border: none;
+        cursor: pointer;
+
+        @media only screen and (min-width: $bp-largest) {
+            font-size: 5rem;
+            padding: 3.5rem 6rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            margin-top: 4rem;
+            font-size: 2.5rem;
+            padding: 1.8rem 4.3rem;
+        }
+
+        @media only screen and (max-width: $bp-smallest) {
+            margin-top: 1rem;
+            font-size: 2.5rem;
+            padding: 2rem 4.5rem;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-.3rem);
+        box-shadow: 0 1rem 2rem rgba(black,.2);
+
+        color: $color-pitt-gold;
+
+        &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+        }
+    }
+
+    &:active {
+        transform: translateY(-.1rem);
+        box-shadow: 0 .7rem 1rem rgba(black,.4);
+    }
+
+    &::after {
+        content: "";
+        display: inline-block;
+        height: 100%;
+        width: 100%;
+        border-radius: 10rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        transition: all .4s;
+    }
+
+    &--white {
+        background-color: white;
+        color: $color-pitt-blue;
+    
+        &::after {
+            background-color: white;
+        }
+    }
+
+    &--login {
+        text-transform: uppercase;
+        text-decoration: none;
+        padding: 1rem 4rem;
+        display: inline-block;
+        margin: 2.5rem auto;
+        border-radius: 10rem;
+        transition: all .2s;
+        font-size: 1.5rem;
+        border: none;
+        cursor: pointer;
+        background-color: $color-pitt-blue;
+        color: white;
+
+        &--fake {
+            text-align: center;
+        }
+
+        @media only screen and (max-width: $bp-medium-large) {
+            font-size: 2rem;
+            padding: 1.2rem 5rem;
+        }
+
+        &:hover {
+            transform: translateY(-.3rem);
+            box-shadow: 0 1rem 2rem rgba(black,.2);
+            background-color: $color-pitt-blue-light;
+        }
+
+        &:active {
+            transform: translateY(-.1rem);
+            box-shadow: 0 .7rem 1rem rgba(black,.4);
+        }
+    }
+
+    &--animated {
+        animation: moveInBottom .5s ease-out .75s;
+        animation-fill-mode: backwards;
+    }
+}
+

@@ -1,0 +1,21 @@
+@import 'abstracts/animations';
+@import 'abstracts/variables';
+
+@import 'base/base';
+
+@import 'components/alerts';
+@import 'components/button';
+
+@import 'layout/footer';
+@import 'layout/navigation';
+
+@import 'pages/home';
+@import 'pages/error';
+@import 'pages/students';
+@import 'pages/login';
+@import 'pages/register';
+@import 'pages/user';
+@import 'pages/teachers';
+@import 'pages/contact';
+@import 'pages/data';
+@import 'pages/manage';

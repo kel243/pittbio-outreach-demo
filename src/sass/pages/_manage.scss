@@ -1,0 +1,149 @@
+.manage-container {
+  background-image: linear-gradient(rgba(black, 0.2), rgba(black, 0.2)),
+    url(../assets/pictures/hero.jpg);
+  background-attachment: fixed;
+  width: 100%;
+  padding: 12rem 0;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+
+  @media only screen and (max-width: $bp-medium-large) {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding: 0;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  }
+}
+
+.bars-container {
+  padding: 5rem;
+  background-color: white;
+  max-width: 120rem;
+  width: 95%;
+  margin: 0 auto;
+
+  @media only screen and (max-width: $bp-medium) {
+    padding: 5rem 1rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    width: 100%;
+  }
+}
+
+.bar {
+  display: flex;
+  justify-content: space-between;
+  background-color: $color-pitt-blue;
+  background-image: linear-gradient(
+    to right,
+    rgba(white, 0.2),
+    rgba(black, 0.1)
+  );
+  color: white;
+  border-radius: 0.5rem;
+  align-items: center;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem;
+
+  &__header {
+    padding: 1rem;
+    padding-left: 3rem;
+  }
+
+  &__photo {
+    width: 8rem;
+    border-radius: 10rem;
+  }
+
+  &__info {
+    padding: 0 2rem;
+    display: flex;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 0 0.5rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    font-size: 1.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 1.4rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      margin: 1px 0;
+    }
+  }
+
+  &__spacer {
+    margin: 0 0.5rem;
+    color: $color-pitt-gold;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin: 0 0.3rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      display: none;
+    }
+  }
+
+  &__btns {
+    width: 15rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  &__btn {
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 1.3rem;
+    text-decoration: none;
+
+    &--data {
+      background-color: white;
+      color: black;
+
+      &:hover {
+        background-color: rgb(216, 216, 216);
+      }
+    }
+
+    &--disable {
+      background-color: rgb(243, 0, 0);
+      color: white;
+
+      &:hover {
+        background-color: rgb(190, 0, 0);
+      }
+    }
+
+    &--enable {
+      background-color: rgb(0, 173, 0);
+      color: white;
+
+      &:hover {
+        background-color: rgb(0, 207, 0);
+      }
+    }
+  }
+}
+
+.validated {
+  color: rgb(0, 204, 0);
+}
+
+.notValidated {
+  color: red;
+}

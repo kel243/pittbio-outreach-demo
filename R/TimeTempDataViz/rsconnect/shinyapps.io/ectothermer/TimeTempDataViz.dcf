@@ -1,0 +1,12 @@
+name: TimeTempDataViz
+title: TimeTempDataViz
+username:
+account: ectothermer
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 2103753
+bundleId: 3057826
+url: https://ectothermer.shinyapps.io/TimeTempDataViz/
+when: 1587698275.00515
+asMultiple: FALSE
+asStatic: FALSE

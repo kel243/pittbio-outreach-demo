@@ -1,0 +1,17 @@
+extends base
+
+block content
+    .user-data-container
+        .data-downloads
+            table.data-downloads__list--table
+                thead.data-downloads__list--thead
+                tr.data-downloads__list--table-head
+                    th.data-downloads__column100--column Description
+                    th.data-downloads__column100--column Link
+                tbody
+                each file in files
+                    tr.data-downloads__list--row100
+                        td.data-downloads__list--column100-1 #{file}
+                        td.data-downloads__list--column100
+                            a(href=`../assets/data/${file}`) Download
+                

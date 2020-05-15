@@ -1,0 +1,108 @@
+.student-container {
+  font-size: 2rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.4);
+  width: 100%;
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 2em;
+  }
+
+  @media only screen and (max-width: $bp-large) {
+    width: 100%;
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    padding-bottom: 5rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding-bottom: 3rem;
+    width: 100%;
+  }
+
+  @media only screen and (max-width: $bp-smallest) {
+    padding-bottom: 2rem;
+    width: 100%;
+  }
+}
+
+.student-downloads {
+  width: 100%;
+
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0px 30px 30px 32px;
+
+  &__list--table {
+    width: 35em;
+    z-index: 5;
+
+    @media only screen and (max-width: $bp-medium) {
+      width: 90%;
+      padding-right: 2.5rem;
+    }
+  }
+
+  &__column100--column {
+    text-align: center;
+    height: 3em;
+    border-bottom: solid 1px #888686;
+  }
+
+  &__list--table-head {
+    text-align: center;
+  }
+
+  &__list--row100 {
+    padding: 10px;
+
+    &:hover {
+      background-color: #f5f5f5;
+    }
+  }
+
+  &__list--column100 {
+    text-align: center;
+    padding: 0.5em;
+    width: 25%;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding-bottom: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding-bottom: 2rem;
+    }
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding-bottom: 2rem;
+    }
+
+    &-1 {
+      text-align: left;
+      width: 75%;
+
+      @media only screen and (max-width: $bp-medium) {
+        padding-bottom: 2rem;
+      }
+
+      @media only screen and (max-width: $bp-small) {
+        padding-bottom: 2rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    padding-bottom: 0rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    padding-bottom: 0rem;
+  }
+}

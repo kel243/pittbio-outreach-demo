@@ -1,0 +1,21 @@
+doctype html
+html
+    block head
+        meta(charset='UTF-8')
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        meta(http-equiv='X-UA-Compatible' content='ie=edge')
+        link(rel='stylesheet' href='/css/main.css')
+        link(href='https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap' rel='stylesheet')
+        link(rel='shortcut icon' type='image/png' href='assets/logos/outreach-logo.png')
+        title #{title}
+
+    body(data-alert=`${alert ? alert : ''}`)
+        include _nav
+
+        block content
+
+        include _footer
+
+        script(type='text/javascript' src='/js/bundle.js.map')
+        script(type='text/javascript' src='/js/bundle.js')
+        

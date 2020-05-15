@@ -1,0 +1,32 @@
+extends base
+
+block content
+    .data-container
+        .hero
+            h1.hero__header--main
+                | PittBio
+            h1.hero__header--main--second
+                | Outreach
+            p.hero__header--sub
+                | Data Submission
+            a.btn.btn--white.btn--animated(href='#statement') Submit class data here
+        #statement.statement
+            h2.statement__header(style='padding-top: 1em; font-size: 3rem;')
+                | Student Data Submission
+            p.statement__paragraph(style='text-align: center; font-size: 2rem')
+                |Save your data to your account so you or the admins can download the files later.
+        form.submission-form(action='/data' method='post' enctype="multipart/form-data")
+            div(style='padding-top: 2em; padding-left: 8em; text-align: center;')
+                input#data(type='file' name='data')
+            .button-container
+                button.btn--login.btn--update(type='submit') Save File
+        .statement
+            h2.statement__header(style='font-size: 3rem;')
+                | Data Visualization
+            p.statement__paragraph(style='text-align: center; font-size: 2rem')
+                |The windows below provide different ways to visualize the data.
+                |In the first box, you can upload the Sun vs. Shade 24 hour data 
+                |(“Sun-shade Frog Data for Histogram” in Student Documents) to compare the data.
+                |In the second box, you can analyze the mass change after the frogs have been in their microhabitats. 
+        iframe(width='660', height='371', class='dataVisuals' src='https://ectothermer.shinyapps.io/TimeTempDataViz/')
+        iframe(width='660', height='371', class='dataVisuals' src='https://ectothermer.shinyapps.io/MassDataViz/')

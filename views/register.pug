@@ -1,0 +1,24 @@
+extends base
+
+block content
+    .register-container
+        form.register-form#register-form
+            .register-form__register-inputs
+                img.register-form__logo(src='/assets/logos/outreach-logo.png' alt='Logo')
+                .register-name-form
+                    label.register-fname-label(for='fname') First Name
+                    input.register-fname-input#fname-register(type='text' name='fname' required='')
+                    label.register-lname-label(for='lname') Last Name
+                    input.register-lname-input#lname-register(type='text' name='lname' required='')
+                label.register-label(for='email') E-mail Address
+                input.register-email-input#email-register(type='email' name='email' required='')
+                label.register-label(for='phone') Phone Number
+                input.register-phone-input#phone-register(type='text' name='phone')
+                label.register-label(for='school') School Name
+                input.register-school-input#school-register(type='text' name='school' required='')
+                label.register-label.role-label(for='role') Role
+                select.register-role-select#role-register(name='role' required='')
+                    option(value='Teacher' selected) Teacher
+                    option(value='Admin') Admin
+                .button-container
+                    button.btn--login(type='submit') Register
